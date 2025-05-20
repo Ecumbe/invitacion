@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Invitación - Andrea</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #7ecbff 0%, #fff6e0 100%);
+            background-size: 200% 200%;
+            animation: gradientMove 8s ease-in-out infinite;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Baloo 2', 'Comic Sans MS', cursive, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+        @keyframes gradientMove {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        /* Animación de movimiento suave para hojas */
+        @keyframes hojaFloat {
+            0%   { transform: translateY(0) scale(1) rotate(var(--rot)); }
+            50%  { transform: translateY(-18px) scale(1.04) rotate(calc(var(--rot) + 6deg)); }
+            100% { transform: translateY(0) scale(1) rotate(var(--rot)); }
+        }
+        .hoja-bg {
+            position: fixed;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.4;
+            filter: drop-shadow(0 2px 8px #0002);
+            transition: opacity 0.5s;
+            animation: hojaFloat 5s ease-in-out infinite;
+        }
+        .hoja1 { left: 5vw; top: 8vh; width: 120px; --rot: -18deg; animation-delay: 0s;}
+        .hoja2 { left: 60vw; top: 3vh; width: 90px; --rot: 22deg; animation-delay: 1.2s;}
+        .hoja3 { left: 80vw; top: 20vh; width: 160px; --rot: -8deg; animation-delay: 2.1s;}
+        .hoja4 { left: 10vw; top: 60vh; width: 80px; --rot: 35deg; animation-delay: 0.7s;}
+        .hoja5 { left: 70vw; top: 70vh; width: 110px; --rot: -30deg; animation-delay: 1.7s;}
+        .hoja6 { left: 40vw; top: 80vh; width: 140px; --rot: 12deg; animation-delay: 2.7s;}
+        .hoja7 { left: 30vw; top: 40vh; width: 70px; --rot: -25deg; animation-delay: 1.4s;}
+        .hoja8 { left: 85vw; top: 50vh; width: 100px; --rot: 15deg; animation-delay: 0.4s;}
+        .titulo-img {
+            display: block;
+            margin: 0 auto 18px auto;
+            width: 230px;
+            max-width: 90vw;
+            position: relative;
+            top: 0;
+            z-index: 2;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.377);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            padding: 41px 36px 31px 36px; /* 15% menos en top/bottom */
+            text-align: center;
+            max-width: 364px;
+            width: 90vw;
+            min-height: 337px; /* 15% menos de alto */
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .entrada-img {
+            width: 221px; /* 15% menos que 260px */
+            max-width: 68vw; /* 15% menos que 80vw */
+            margin: 0 auto 12px auto;
+            display: block;
+        }
+        .stitch1-img {
+            position: absolute;
+            left: -75px;
+            bottom: -32px;
+            width: 310px;
+            z-index: 2;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hojas PNG en posiciones aleatorias y tamaños variados -->
+    <img src="hoja.png" class="hoja-bg hoja1" alt="">
+    <img src="hoja.png" class="hoja-bg hoja2" alt="">
+    <img src="hoja.png" class="hoja-bg hoja3" alt="">
+    <img src="hoja.png" class="hoja-bg hoja4" alt="">
+    <img src="hoja.png" class="hoja-bg hoja5" alt="">
+    <img src="hoja.png" class="hoja-bg hoja6" alt="">
+    <img src="hoja.png" class="hoja-bg hoja7" alt="">
+    <img src="hoja.png" class="hoja-bg hoja8" alt="">
+    <!-- Imagen de título arriba del cuadro -->
+    <img src="titulo.png" alt="Título" class="titulo-img">
+    <div class="container">
+        <img src="stitch1.png" alt="Stitch" class="stitch1-img">
+        <!-- Texto arriba de la entrada -->
+        <div style="margin-bottom: 10px; font-size: 1em; color: #1e4fa3; font-family: 'Baloo 2', cursive;">
+            <!-- Aquí tu texto de invitación -->
+            ¡Tenemos una cita este Viernes! 
+            
+        </div>
+        <div style="margin-bottom: 10px; font-size: 1em; color: #1e4fa3; font-family: 'Baloo 2', cursive;">
+            <!-- Aquí tu texto de invitación -->
+            
+            veremo la Peli mas esperada, se que nos divertiremos mucho
+        </div>
+        <img src="entrada.jpeg" alt="Entrada" class="entrada-img">
+        <!-- Aquí puedes agregar más información de la invitación -->
+    </div>
+</body>
+</html>
